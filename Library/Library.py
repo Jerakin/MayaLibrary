@@ -497,14 +497,6 @@ def slugify(value):
     value = unicode(re.sub('[-\s]+', '-', value))
     return value
 
-
-def convert_ui():
-    from pysideuic import compileUi
-    pyfile = open("/Users/mattias.hedberg/Documents/repo/presto_util/production/library/window.py", 'w')
-    compileUi("/Users/mattias.hedberg/Documents/repo/presto_util/production/library/main.ui", pyfile, False, 4,
-              False)
-    pyfile.close()
-
     
 def main():
     mayaMainWindowPtr = omui.MQtUtil.mainWindow()
